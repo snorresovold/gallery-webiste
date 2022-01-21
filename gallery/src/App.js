@@ -1,19 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
-import Gallery from './components/gallery';
+import AwesomeSlider from 'react-awesome-slider';
+import styles from "./styles.scss"
 
-const images = [
-  {
-    original: '',
-    thumbnail: ''
-  }
-]
 
 
 function App() {
   return (
     <div className="App">
-      <Gallery items={images} />
+      <h1>Gallery</h1>
+
+      <div>
+        <h3>AI generte bilder</h3>
+        <AwesomeSlider cssModule={styles}>
+          <div data-src="/assets/ai/sus.png" />
+        </AwesomeSlider>
+      </div>
     </div>
   );
 }
